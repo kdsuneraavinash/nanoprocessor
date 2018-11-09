@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+80 true E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Reg_Bank.vhd
