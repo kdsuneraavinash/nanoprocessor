@@ -31,31 +31,31 @@ end TB_TSB_Set_2_to_4;
 architecture Behavioral of TB_TSB_Set_2_to_4 is
     component TSB_Set_2_to_4
         Port(
-            S: in STD_LOGIC;
-            R0 : in STD_LOGIC_VECTOR (3 downto 0);
-            R1 : in STD_LOGIC_VECTOR (3 downto 0);
+            JMP: in STD_LOGIC;
+            A : in STD_LOGIC_VECTOR (3 downto 0);
+            B : in STD_LOGIC_VECTOR (3 downto 0);
             Q: out STD_LOGIC_VECTOR(3 downto 0));
     end component;
     
-    signal R0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal R1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal S : STD_LOGIC := '0';
+    signal A : STD_LOGIC_VECTOR (3 downto 0);
+    signal B : STD_LOGIC_VECTOR (3 downto 0);
+    signal JMP : STD_LOGIC := '0';
     signal Q : STD_LOGIC_VECTOR (3 downto 0);
     
 begin
     UUT: TSB_Set_2_to_4 port map(
-            S => S,
-            R0 => R0,
-            R1 => R1,
+            JMP => JMP,
+            A => A,
+            B => B,
             Q => Q);
             
     process begin
-        R0 <= "0001";
-        R1 <= "1000";
+        A <= "0001";
+        B <= "1000";
         
-         S <= '0';
+         JMP <= '0';
          wait for 200ns;
-         S <= '1';
+         JMP <= '1';
          wait;
                  
      end process;

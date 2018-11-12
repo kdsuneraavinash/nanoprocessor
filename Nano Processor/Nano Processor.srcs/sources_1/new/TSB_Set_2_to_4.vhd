@@ -24,9 +24,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity TSB_Set_2_to_4 is
         Port(
-            S: in STD_LOGIC;
-            R0 : in STD_LOGIC_VECTOR (3 downto 0);
-            R1 : in STD_LOGIC_VECTOR (3 downto 0);
+            JMP: in STD_LOGIC;
+            A : in STD_LOGIC_VECTOR (3 downto 0);
+            B : in STD_LOGIC_VECTOR (3 downto 0);
             Q: out STD_LOGIC_VECTOR(3 downto 0));
 end TSB_Set_2_to_4;
 
@@ -44,31 +44,31 @@ architecture Behavioral of TSB_Set_2_to_4 is
     end component;
 
     signal EN_TSB: std_logic_vector(1 downto 0);
-    signal V0: STD_LOGIC_VECTOR (3 downto 0);
-    signal V1: STD_LOGIC_VECTOR (3 downto 0);
+    signal VA: STD_LOGIC_VECTOR (3 downto 0);
+    signal VB: STD_LOGIC_VECTOR (3 downto 0);
     
 begin
     Decoder_1_to_2_0: Decoder_1_to_2
         port map(
-            I  => S,
+            I  => JMP,
             EN => '1',
             Y  => EN_TSB(1 downto 0)
         );
         
     Tri_State_Buffer_4_0: Tri_State_Buffer_4
         port map(
-            I  => R0 (3 downto 0),
+            I  => A (3 downto 0),
             EN => EN_TSB(0),
-            O  => V0
+            O  => VA
         );
                   
     Tri_State_Buffer_4_1: Tri_State_Buffer_4
       port map(
-          I  => R1 (3 downto 0),
+          I  => B (3 downto 0),
           EN => EN_TSB(1),
-          O  => V1
+          O  => VB
       );
 
-    Q <= V0 OR V1;
+    Q <= VA OR VB;
       
 end Behavioral;
