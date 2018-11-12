@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_D_FF_behav xil_defaultlib.TB_D_FF -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_Instruction_Decoder_behav xil_defaultlib.TB_Instruction_Decoder -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,6 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_d_ff
-Built simulation snapshot TB_D_FF_behav
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_instruction_decoder
+Built simulation snapshot TB_Instruction_Decoder_behav

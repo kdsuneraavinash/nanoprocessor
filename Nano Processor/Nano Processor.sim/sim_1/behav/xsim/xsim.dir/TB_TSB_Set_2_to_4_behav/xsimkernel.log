@@ -2,3 +2,6 @@ Running: xsim.dir/TB_TSB_Set_2_to_4_behav/xsimk.exe -simmode gui -wdb TB_TSB_Set
 Design successfully loaded
 Design Loading Memory Usage: 4840 KB (Peak: 4840 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5384 KB (Peak: 5384 KB)
+Simulation CPU Usage: 0 ms
