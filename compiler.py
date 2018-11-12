@@ -22,12 +22,26 @@ opcodes = {
 
 # Define inputs here
 inputs = [
-    "NEG R",
-    "ADD R4 R5",
-    "MOVI R3"
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
+    "NOP",
     ]
 
 
+compiled = []
 for i in xrange(len(inputs)):
     raw_data = inputs[i].upper().split()
     try:
@@ -66,11 +80,16 @@ for i in xrange(len(inputs)):
                         bin(int(encoded_literal))[2:].zfill(4)
         
         # Output
-        print opcode + ra + rb + literal
+        compiled.append("\"" + opcode + ra + rb + literal + "\"")
     except:
         # Syntax error catcher
         print "Syntax Error in line {}\nLine:\t{}\n".format(i, inputs[i]) 
         break
-
-
-
+else:
+    print """
+signal instruction_ROM : rom_type := (
+\t\t{}
+ );
+    
+    """.format(",\n\t\t".join(compiled))
+    
