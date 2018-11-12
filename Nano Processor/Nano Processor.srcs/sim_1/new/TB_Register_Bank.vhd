@@ -1,3 +1,6 @@
+
+
+
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
@@ -86,15 +89,30 @@ begin
             CLK <= '0';
             wait for 50ns;
             
-            loop_b: for i in 0 to 8 loop
+            loop_b: for i in 0 to 2 loop
                 CLK <= '1';
                 wait for 50ns;
                 CLK <= '0';
                 wait for 50ns;
             end loop loop_b;
+                            
+            CLK <= '1';
+            D <= "00011110";
+            I <= "011"; 
+            wait for 50ns;
+            CLK <= '0';
+            wait for 50ns;
+            
+            loop_c: for i in 0 to 2 loop
+                CLK <= '1';
+                wait for 50ns;
+                CLK <= '0';
+                wait for 50ns;
+            end loop loop_c;
           
           wait;
           
     end process;
 
 end Behavioral;
+

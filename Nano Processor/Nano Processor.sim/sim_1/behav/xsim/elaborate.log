@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_Add_Sub_behav xil_defaultlib.TB_Add_Sub -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_TSB_Set_2_to_4_behav xil_defaultlib.TB_TSB_Set_2_to_4 -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,8 +10,9 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
-Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
-Compiling architecture behavioral of entity xil_defaultlib.Add_Sub [add_sub_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_add_sub
-Built simulation snapshot TB_Add_Sub_behav
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_1_to_2 [decoder_1_to_2_default]
+Compiling architecture behavioral of entity xil_defaultlib.Tri_State_Buffer_4 [tri_state_buffer_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.TSB_Set_2_to_4 [tsb_set_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_tsb_set_2_to_4
+Built simulation snapshot TB_TSB_Set_2_to_4_behav

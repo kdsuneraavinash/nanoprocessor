@@ -20,17 +20,21 @@ entity Reg is
 end Reg;
 
 architecture Behavioral of Reg is
-    signal Stored_Value: STD_LOGIC_VECTOR(7 downto 0) :="00000000";
+    signal is_start: boolean := true;
     
 begin
     
     process (Clk) begin
+        if is_start then
+            is_start <= false;
+            Q <= "00000000";
+        end if;
+    
         if (rising_edge(Clk)) then -- respond when clock rises
                 if EN = '1' then
                     -- If enable is set input the value to the register
-                    Stored_Value <= D;
+                    Q <= D;
                 end if;
-                Q <= Stored_Value;
         end if;
        
     end process;
