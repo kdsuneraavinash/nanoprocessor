@@ -49,54 +49,34 @@ begin
             Clk => Clk,
             Q => Q
        );
+                
+       CLK <= not CLK after 50ns;
+       
        process begin
             EN <= '1';
             D <= "0001";
             Res <= '0';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "0010";
             Res <= '1';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "0100";
             Res <= '0';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "1000";
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
+            wait for 100 ns;
             
             EN <= '0';
             D <= "0001";
             Res <= '0';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "0010";
             Res <= '1';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "0100";
             Res <= '0';
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             D <= "1000";
-            Clk <= '1';
-            wait for 50 ns;
-            Clk <= '0';
             wait;
        
        end process;

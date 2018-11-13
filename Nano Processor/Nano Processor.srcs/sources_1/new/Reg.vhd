@@ -16,6 +16,7 @@ entity Reg is
     Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
            EN : in STD_LOGIC := '0';
            Clk : in STD_LOGIC;
+           Reset: in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (7 downto 0));
 end Reg;
 
@@ -30,10 +31,17 @@ begin
             Q <= "00000000";
         end if;
     
-        if (rising_edge(Clk)) then -- respond when clock rises
+        if (falling_edge(Clk)) then -- respond when clock rises
                 if EN = '1' then
                     -- If enable is set input the value to the register
-                    Q <= D;
+                    Q(0) <= D(0) and (not Reset);
+                    Q(1) <= D(1) and (not Reset);
+                    Q(2) <= D(2) and (not Reset);
+                    Q(3) <= D(3) and (not Reset);
+                    Q(4) <= D(4) and (not Reset);
+                    Q(5) <= D(5) and (not Reset);
+                    Q(6) <= D(6) and (not Reset);
+                    Q(7) <= D(7) and (not Reset);
                 end if;
         end if;
        

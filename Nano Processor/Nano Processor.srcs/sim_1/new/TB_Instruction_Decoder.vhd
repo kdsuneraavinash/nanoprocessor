@@ -41,7 +41,7 @@ architecture Behavioral of TB_Instruction_Decoder is
     end component;
     
     signal Inst : STD_LOGIC_VECTOR (16 downto 0);
-    signal CLK : STD_LOGIC;
+    signal CLK : STD_LOGIC :='0';
     signal Reg : STD_LOGIC_VECTOR (7 downto 0);
     signal LSB : STD_LOGIC_VECTOR (7 downto 0);
     signal Reg_En : STD_LOGIC_VECTOR (2 downto 0);
@@ -63,31 +63,27 @@ begin
                 Sub => Sub,
                 JMP => JMP);
                 
+        CLK <= not CLK after 50ns;
+        
         process begin
-            CLK <= '1';
-            wait for 50 ns;
-            CLK <= '0';
-            wait for 50 ns;
             Reg <= "00000000";
             Inst <= "00000101000000000";
-            CLK <= '1';
-            wait for 50 ns;
-            CLK <= '0';
-            wait for 50 ns;
+            wait for 100 ns;
             
             Reg <= "00000000";
-            Inst <= "00100101000000000";
-            CLK <= '1';
-            wait for 50 ns;
-            CLK <= '0';
-            wait for 50 ns;
+            Inst <= "01001000011110101";
+            wait for 100 ns;
             
             Reg <= "00000000";
-            Inst <= "01000101000000000";
-            CLK <= '1';
-            wait for 50 ns;
-            CLK <= '0';
-            wait for 50 ns;
+            Inst <= "10101000000000000";
+            
+            Reg <= "00000000";
+            Inst <= "01000100000001010";
+            wait for 100 ns;
+            
+            Reg <= "00000000";
+            Inst <= "11100000000000000";
+            wait for 100 ns;
             wait;
         end process;
 

@@ -73,43 +73,20 @@ begin
             R6 => R6,
             R7 => R7
        );
+            
+    CLK <= not CLK after 50ns;
        
     process begin
-            loop_a: for i in 0 to 2 loop
-                CLK <= '1';
-                wait for 50ns;
-                CLK <= '0';
-                wait for 50ns;
-            end loop loop_a;
-            
-            CLK <= '1';
+            wait for 150ns;
             D <= "00010000";
             I <= "010"; 
-            wait for 50ns;
-            CLK <= '0';
-            wait for 50ns;
             
-            loop_b: for i in 0 to 2 loop
-                CLK <= '1';
-                wait for 50ns;
-                CLK <= '0';
-                wait for 50ns;
-            end loop loop_b;
-                            
-            CLK <= '1';
+            wait for 150ns;
             D <= "00011110";
             I <= "011"; 
-            wait for 50ns;
-            CLK <= '0';
-            wait for 50ns;
-            
-            loop_c: for i in 0 to 2 loop
-                CLK <= '1';
-                wait for 50ns;
-                CLK <= '0';
-                wait for 50ns;
-            end loop loop_c;
-          
+                        
+            wait for 150ns;
+            CLR <= '1';
           wait;
           
     end process;

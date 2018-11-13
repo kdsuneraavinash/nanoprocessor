@@ -25,7 +25,6 @@ entity Reg_Bank is
             R5 : out STD_LOGIC_VECTOR (7 downto 0);
             R6 : out STD_LOGIC_VECTOR (7 downto 0);
             R7 : out STD_LOGIC_VECTOR (7 downto 0));
-            
 end Reg_Bank;
 
 architecture Behavioral of Reg_Bank is
@@ -42,6 +41,7 @@ architecture Behavioral of Reg_Bank is
     component Reg
     Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
            EN : in STD_LOGIC;
+           Reset: in STD_LOGIC;
            Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (7 downto 0)
      );
@@ -55,14 +55,14 @@ begin
 
     -- Real value which will be stored in the register
     -- 0 if CLR is set
-    Reg_Store_Val(0) <= D(0) AND (NOT CLR);
-    Reg_Store_Val(1) <= D(1) AND (NOT CLR);
-    Reg_Store_Val(2) <= D(2) AND (NOT CLR);
-    Reg_Store_Val(3) <= D(3) AND (NOT CLR);
-    Reg_Store_Val(4) <= D(4) AND (NOT CLR);
-    Reg_Store_Val(5) <= D(5) AND (NOT CLR);
-    Reg_Store_Val(6) <= D(6) AND (NOT CLR);
-    Reg_Store_Val(7) <= D(7) AND (NOT CLR);
+    Reg_Store_Val(0) <= D(0);
+    Reg_Store_Val(1) <= D(1);
+    Reg_Store_Val(2) <= D(2);
+    Reg_Store_Val(3) <= D(3);
+    Reg_Store_Val(4) <= D(4);
+    Reg_Store_Val(5) <= D(5);
+    Reg_Store_Val(6) <= D(6);
+    Reg_Store_Val(7) <= D(7);
 
     Decoder_3_to_8_0: Decoder_3_to_8
         port map(
@@ -78,6 +78,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(1),
+            Reset => CLR,
             Clk => Clk,
             Q => R1(7 downto 0)
         );
@@ -86,6 +87,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(2),
+            Reset => CLR,
             Clk => Clk,
             Q => R2(7 downto 0)
         );
@@ -94,6 +96,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(3),
+            Reset => CLR,
             Clk => Clk,
             Q => R3(7 downto 0)
         );
@@ -102,6 +105,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(4),
+            Reset => CLR,
             Clk => Clk,
             Q => R4(7 downto 0)
         );
@@ -110,6 +114,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(5),
+            Reset => CLR,
             Clk => Clk,
             Q => R5(7 downto 0)
         );
@@ -118,6 +123,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(6),
+            Reset => CLR,
             Clk => Clk,
             Q => R6(7 downto 0)
         );
@@ -126,6 +132,7 @@ begin
         port map(
             D  => Reg_Store_Val(7 downto 0),
             EN => Reg_Sel(7),
+            Reset => CLR,
             Clk => Clk,
             Q => R7(7 downto 0)
         );
