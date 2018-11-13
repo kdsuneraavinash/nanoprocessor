@@ -65,15 +65,29 @@ begin
                 
         process begin
             CLK <= '1';
-            wait for 50ns;
+            wait for 50 ns;
             CLK <= '0';
-            wait for 50ns;
+            wait for 50 ns;
             Reg <= "00000000";
             Inst <= "00000101000000000";
             CLK <= '1';
-            wait for 50ns;
+            wait for 50 ns;
             CLK <= '0';
-            wait for 50ns;
+            wait for 50 ns;
+            
+            Reg <= "00000000";
+            Inst <= "00100101000000000";
+            CLK <= '1';
+            wait for 50 ns;
+            CLK <= '0';
+            wait for 50 ns;
+            
+            Reg <= "00000000";
+            Inst <= "01000101000000000";
+            CLK <= '1';
+            wait for 50 ns;
+            CLK <= '0';
+            wait for 50 ns;
             wait;
         end process;
 
