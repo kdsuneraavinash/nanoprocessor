@@ -44,12 +44,32 @@ architecture Behavioral of Instruction_Decoder is
     constant OP_CLR: std_logic_vector(2 downto 0):= "101";
     constant OP_MOV: std_logic_vector(2 downto 0):= "110";
     constant OP_NOP: std_logic_vector(2 downto 0):= "111";
+    
+    signal jumped: boolean:= false;
+    signal jump_pos: STD_LOGIC_VECTOR (7 downto 0);
 begin
 
 	process (CLK)
     	-- variable l : line;
   	begin
     if rising_edge(CLK) then
+    
+        if jumped then
+            jumped <= false;
+            Mux_A <= "111";                         -- Reg7 (Last Acc)
+            Mux_B <= "000";                         -- Reg0 (0)
+            SUB <= '0';                             -- + => Acc + 0
+            -- storing (Store result in register given)
+            Reg_En <= "111";                        -- Reg7
+            LD <= '0';                              -- From Acc
+            LSB <= jump_pos;                        -- Given Literal value
+            if (Reg = "00000000") then
+                JMP <= '1';     
+            else
+                JMP <= '0';     
+            end if;
+            
+        else
     
       case Inst(16 downto 14) is
       -- addition
@@ -132,15 +152,11 @@ begin
             -- storing (Store result in register given)
             Reg_En <= "000";                        -- Reg0
             LD <= '0';                              -- From Acc
-            LSB <= Inst(7 downto 0);                -- Given Literal value for jump
+            LSB <= "00000000";                      -- Given Literal value for jump
             -- jump 
-            if (Reg = "00000000") then
-                report "Req is 0";
-                JMP <= '1';     
-            else
-                report "Req is not 0";
-                JMP <= '0';     
-            end if;
+            JMP <= '0';
+            jumped <= true;
+            jump_pos <= Inst(7 downto 0);
         
         -- no operation
         when others =>
@@ -156,6 +172,7 @@ begin
           
       end case;
     end if;
+              end if;
   end process;
 
 end Behavioral; 
