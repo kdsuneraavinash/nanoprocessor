@@ -58,19 +58,14 @@ begin
         
         MUX_A_DISABLED <= OP_NEG OR OP_MOV;  -- A has to be disabled in these instructions
         
-        Mux_A(0) <= Inst(11)
-                    AND NOT MUX_A_DISABLED;
-        Mux_A(1) <= Inst(12)
-                    AND NOT MUX_A_DISABLED;
-        Mux_A(2) <= Inst(13)
-                    AND NOT MUX_A_DISABLED;
+        Mux_A(0) <= Inst(11) AND NOT MUX_A_DISABLED;
+        Mux_A(1) <= Inst(12) AND NOT MUX_A_DISABLED;
+        Mux_A(2) <= Inst(13) AND NOT MUX_A_DISABLED;
         
-        Mux_B(0) <= Inst(8)                   -- B should get instructions in last bits in these instructions
-                    OR (Inst(11) AND OP_NEG);
-        Mux_B(1) <= Inst(9)
-                    OR (Inst(12) AND OP_NEG);
-        Mux_B(2) <= Inst(10)
-                    OR (Inst(13) AND OP_NEG);
+        -- B should get instructions in last bits in these instructions
+        Mux_B(0) <= Inst(8) OR (Inst(11) AND OP_NEG);
+        Mux_B(1) <= Inst(9) OR (Inst(12) AND OP_NEG);
+        Mux_B(2) <= Inst(10) OR (Inst(13) AND OP_NEG);
         
         SUB <= OP_NEG OR OP_SUB;
         

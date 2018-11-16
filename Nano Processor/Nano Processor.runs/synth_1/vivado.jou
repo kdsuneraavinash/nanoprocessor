@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Nov 16 09:53:49 2018
-# Process ID: 4752
+# Start of session at: Fri Nov 16 22:18:45 2018
+# Process ID: 8372
 # Current directory: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1
-# Command line: vivado.exe -log Nano_Processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nano_Processor.tcl
-# Log file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1/Nano_Processor.vds
+# Command line: vivado.exe -log High_Level_Nano_Processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source High_Level_Nano_Processor.tcl
+# Log file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1/High_Level_Nano_Processor.vds
 # Journal file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Nano_Processor.tcl -notrace
+source High_Level_Nano_Processor.tcl -notrace

@@ -1,0 +1,483 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 16 22:18:45 2018
+# Process ID: 8372
+# Current directory: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1
+# Command line: vivado.exe -log High_Level_Nano_Processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source High_Level_Nano_Processor.tcl
+# Log file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1/High_Level_Nano_Processor.vds
+# Journal file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source High_Level_Nano_Processor.tcl -notrace
+Command: synth_design -top High_Level_Nano_Processor -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6296 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 357.965 ; gain = 99.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'High_Level_Nano_Processor' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:39]
+INFO: [Synth 8-3491] module 'Slow_Clk' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Slow_Clk.vhd:10' bound to instance 'Slow_Clk_0' of component 'Slow_Clk' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Slow_Clk.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Slow_Clk.vhd:15]
+INFO: [Synth 8-3491] module 'Nano_Processor' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:13' bound to instance 'Nano_Processor_0' of component 'Nano_Processor' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'Nano_Processor' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:33]
+INFO: [Synth 8-3491] module 'Program_Counter' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:9' bound to instance 'Program_Counter_0' of component 'Program_Counter' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'Program_Counter' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:16]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_0' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (2#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:16]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_1' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:32]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_2' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:39]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_3' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Program_Counter' (3#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Program_Counter.vhd:16]
+INFO: [Synth 8-3491] module 'Add_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:9' bound to instance 'Add_4_0' of component 'Add_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'Add_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:14]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_0' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'HA' (4#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:33]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_1' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:33]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_2' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:39]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_3' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Add_4' (5#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_4.vhd:14]
+INFO: [Synth 8-3491] module 'TSB_Set_2_to_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:9' bound to instance 'RSB_Set_2_to_4_0' of component 'TSB_Set_2_to_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'TSB_Set_2_to_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:17]
+INFO: [Synth 8-3491] module 'Decoder_1_to_2' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_1_to_2.vhd:9' bound to instance 'Decoder_1_to_2_0' of component 'Decoder_1_to_2' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'Decoder_1_to_2' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_1_to_2.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_1_to_2' (6#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_1_to_2.vhd:15]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_4.vhd:9' bound to instance 'Tri_State_Buffer_4_0' of component 'Tri_State_Buffer_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'Tri_State_Buffer_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_4.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Tri_State_Buffer_4' (7#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_4.vhd:15]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_4.vhd:9' bound to instance 'Tri_State_Buffer_4_1' of component 'Tri_State_Buffer_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Set_2_to_4' (8#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd:17]
+INFO: [Synth 8-3491] module 'ROM_16_17' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/ROM_16_17.vhd:11' bound to instance 'ROM_16_17_0' of component 'ROM_16_17' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'ROM_16_17' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/ROM_16_17.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'ROM_16_17' (9#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/ROM_16_17.vhd:19]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd:9' bound to instance 'Instruction_Decoder_0' of component 'Instruction_Decoder' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd:21]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:10' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:16]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_2_to_4.vhd:15' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_2_to_4.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (10#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_2_to_4.vhd:22]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_2_to_4.vhd:15' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (11#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (12#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd:21]
+INFO: [Synth 8-3491] module 'TSB_Set_2_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:9' bound to instance 'TSB_Set_2_to_8_0' of component 'TSB_Set_2_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'TSB_Set_2_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:17]
+INFO: [Synth 8-3491] module 'Decoder_1_to_2' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_1_to_2.vhd:9' bound to instance 'Decoder_1_to_2_0' of component 'Decoder_1_to_2' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:34]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_0' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Tri_State_Buffer_8' (13#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:15]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_1' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Set_2_to_8' (14#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd:17]
+INFO: [Synth 8-3491] module 'Reg_Bank' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:9' bound to instance 'Reg_Bank_0' of component 'Reg_Bank' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'Reg_Bank' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:24]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:10' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:50]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_1' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_0' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:30]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_1' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:37]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_2' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:44]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_3' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:51]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_4' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:58]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_5' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:65]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_6' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:72]
+INFO: [Synth 8-3491] module 'D_Flip_Flop' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd:9' bound to instance 'D_Flip_Flop_7' of component 'D_Flip_Flop' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (15#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_2' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:70]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_3' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:79]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_4' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:88]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_5' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:97]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_6' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:106]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg.vhd:9' bound to instance 'Reg_7' of component 'Reg' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'Reg_Bank' (16#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Reg_Bank.vhd:24]
+INFO: [Synth 8-3491] module 'TSB_Set_8_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:9' bound to instance 'MUX_A' of component 'TSB_Set_8_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:215]
+INFO: [Synth 8-638] synthesizing module 'TSB_Set_8_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:23]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd:10' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:40]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_0' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:48]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_1' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:55]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_2' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:62]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_3' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:69]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_4' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:76]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_5' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:83]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_6' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:90]
+INFO: [Synth 8-3491] module 'Tri_State_Buffer_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd:9' bound to instance 'Tri_State_Buffer_8_7' of component 'Tri_State_Buffer_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'TSB_Set_8_to_8' (17#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:23]
+INFO: [Synth 8-3491] module 'TSB_Set_8_to_8' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd:9' bound to instance 'MUX_B' of component 'TSB_Set_8_to_8' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:229]
+INFO: [Synth 8-3491] module 'Add_Sub' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:10' bound to instance 'Add_Sub_0' of component 'Add_Sub' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'Add_Sub' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:22]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_0' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:34]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_0' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:49]
+INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/HA.vhd:26' bound to instance 'HA_1' of component 'HA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'FA' (18#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:34]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_1' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:55]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_2' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_3' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:71]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_4' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:79]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_5' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:87]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_6' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:95]
+INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/FA.vhd:26' bound to instance 'FA_7' of component 'FA' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:103]
+INFO: [Synth 8-256] done synthesizing module 'Add_Sub' (19#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Add_Sub.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Nano_Processor' (20#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/Nano_Processor.vhd:33]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/LUT_16_7.vhd:10' bound to instance 'LUT_16_7_0' of component 'LUT_16_7' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/LUT_16_7.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (21#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/LUT_16_7.vhd:15]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/LUT_16_7.vhd:10' bound to instance 'LUT_16_7_1' of component 'LUT_16_7' [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:119]
+INFO: [Synth 8-256] done synthesizing module 'High_Level_Nano_Processor' (22#1) [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sources_1/new/High_Level_Nano_Processor.vhd:39]
+WARNING: [Synth 8-3917] design High_Level_Nano_Processor has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design High_Level_Nano_Processor has port an[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.828 ; gain = 155.516
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.828 ; gain = 155.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.828 ; gain = 155.516
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/constrs_1/new/Nano_Processor.xdc]
+Finished Parsing XDC File [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/constrs_1/new/Nano_Processor.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/constrs_1/new/Nano_Processor.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/High_Level_Nano_Processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/High_Level_Nano_Processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 746.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "instruction_ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sevenSegment_ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'Decoder_3_to_8:/Decoder_2_to_4_0' (Decoder_2_to_4) to 'Decoder_3_to_8:/Decoder_2_to_4_1'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 30    
++---Registers : 
+	                1 Bit    Registers := 62    
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+	  17 Input      7 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Slow_Clk 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module D_Flip_Flop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module ROM_16_17 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input     17 Bit        Muxes := 1     
+Module Add_Sub 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 10    
+Module LUT_16_7 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design High_Level_Nano_Processor has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design High_Level_Nano_Processor has port an[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 746.523 ; gain = 488.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 748.754 ; gain = 490.441
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     3|
+|4     |LUT2   |   103|
+|5     |LUT3   |     4|
+|6     |LUT4   |    35|
+|7     |LUT5   |    29|
+|8     |LUT6   |    55|
+|9     |FDRE   |    93|
+|10    |FDSE   |     1|
+|11    |IBUF   |     2|
+|12    |OBUF   |    23|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------+------+
+|      |Instance              |Module          |Cells |
++------+----------------------+----------------+------+
+|1     |top                   |                |   361|
+|2     |  Nano_Processor_0    |Nano_Processor  |   253|
+|3     |    Program_Counter_0 |Program_Counter |    88|
+|4     |      D_Flip_Flop_0   |D_Flip_Flop_61  |    14|
+|5     |      D_Flip_Flop_1   |D_Flip_Flop_62  |    44|
+|6     |      D_Flip_Flop_2   |D_Flip_Flop_63  |     4|
+|7     |      D_Flip_Flop_3   |D_Flip_Flop_64  |    26|
+|8     |    Reg_Bank_0        |Reg_Bank        |   165|
+|9     |      Reg_1           |Reg             |    16|
+|10    |        D_Flip_Flop_0 |D_Flip_Flop_53  |     2|
+|11    |        D_Flip_Flop_1 |D_Flip_Flop_54  |     2|
+|12    |        D_Flip_Flop_2 |D_Flip_Flop_55  |     2|
+|13    |        D_Flip_Flop_3 |D_Flip_Flop_56  |     2|
+|14    |        D_Flip_Flop_4 |D_Flip_Flop_57  |     2|
+|15    |        D_Flip_Flop_5 |D_Flip_Flop_58  |     2|
+|16    |        D_Flip_Flop_6 |D_Flip_Flop_59  |     2|
+|17    |        D_Flip_Flop_7 |D_Flip_Flop_60  |     2|
+|18    |      Reg_2           |Reg_0           |    16|
+|19    |        D_Flip_Flop_0 |D_Flip_Flop_45  |     2|
+|20    |        D_Flip_Flop_1 |D_Flip_Flop_46  |     2|
+|21    |        D_Flip_Flop_2 |D_Flip_Flop_47  |     2|
+|22    |        D_Flip_Flop_3 |D_Flip_Flop_48  |     2|
+|23    |        D_Flip_Flop_4 |D_Flip_Flop_49  |     2|
+|24    |        D_Flip_Flop_5 |D_Flip_Flop_50  |     2|
+|25    |        D_Flip_Flop_6 |D_Flip_Flop_51  |     2|
+|26    |        D_Flip_Flop_7 |D_Flip_Flop_52  |     2|
+|27    |      Reg_3           |Reg_1           |     8|
+|28    |        D_Flip_Flop_0 |D_Flip_Flop_37  |     1|
+|29    |        D_Flip_Flop_1 |D_Flip_Flop_38  |     1|
+|30    |        D_Flip_Flop_2 |D_Flip_Flop_39  |     1|
+|31    |        D_Flip_Flop_3 |D_Flip_Flop_40  |     1|
+|32    |        D_Flip_Flop_4 |D_Flip_Flop_41  |     1|
+|33    |        D_Flip_Flop_5 |D_Flip_Flop_42  |     1|
+|34    |        D_Flip_Flop_6 |D_Flip_Flop_43  |     1|
+|35    |        D_Flip_Flop_7 |D_Flip_Flop_44  |     1|
+|36    |      Reg_4           |Reg_2           |     8|
+|37    |        D_Flip_Flop_0 |D_Flip_Flop_29  |     1|
+|38    |        D_Flip_Flop_1 |D_Flip_Flop_30  |     1|
+|39    |        D_Flip_Flop_2 |D_Flip_Flop_31  |     1|
+|40    |        D_Flip_Flop_3 |D_Flip_Flop_32  |     1|
+|41    |        D_Flip_Flop_4 |D_Flip_Flop_33  |     1|
+|42    |        D_Flip_Flop_5 |D_Flip_Flop_34  |     1|
+|43    |        D_Flip_Flop_6 |D_Flip_Flop_35  |     1|
+|44    |        D_Flip_Flop_7 |D_Flip_Flop_36  |     1|
+|45    |      Reg_5           |Reg_3           |    87|
+|46    |        D_Flip_Flop_0 |D_Flip_Flop_21  |    11|
+|47    |        D_Flip_Flop_1 |D_Flip_Flop_22  |     9|
+|48    |        D_Flip_Flop_2 |D_Flip_Flop_23  |     8|
+|49    |        D_Flip_Flop_3 |D_Flip_Flop_24  |    20|
+|50    |        D_Flip_Flop_4 |D_Flip_Flop_25  |    10|
+|51    |        D_Flip_Flop_5 |D_Flip_Flop_26  |    10|
+|52    |        D_Flip_Flop_6 |D_Flip_Flop_27  |    11|
+|53    |        D_Flip_Flop_7 |D_Flip_Flop_28  |     8|
+|54    |      Reg_6           |Reg_4           |     8|
+|55    |        D_Flip_Flop_0 |D_Flip_Flop_13  |     1|
+|56    |        D_Flip_Flop_1 |D_Flip_Flop_14  |     1|
+|57    |        D_Flip_Flop_2 |D_Flip_Flop_15  |     1|
+|58    |        D_Flip_Flop_3 |D_Flip_Flop_16  |     1|
+|59    |        D_Flip_Flop_4 |D_Flip_Flop_17  |     1|
+|60    |        D_Flip_Flop_5 |D_Flip_Flop_18  |     1|
+|61    |        D_Flip_Flop_6 |D_Flip_Flop_19  |     1|
+|62    |        D_Flip_Flop_7 |D_Flip_Flop_20  |     1|
+|63    |      Reg_7           |Reg_5           |    22|
+|64    |        D_Flip_Flop_0 |D_Flip_Flop     |     1|
+|65    |        D_Flip_Flop_1 |D_Flip_Flop_6   |     1|
+|66    |        D_Flip_Flop_2 |D_Flip_Flop_7   |     1|
+|67    |        D_Flip_Flop_3 |D_Flip_Flop_8   |     8|
+|68    |        D_Flip_Flop_4 |D_Flip_Flop_9   |     3|
+|69    |        D_Flip_Flop_5 |D_Flip_Flop_10  |     5|
+|70    |        D_Flip_Flop_6 |D_Flip_Flop_11  |     2|
+|71    |        D_Flip_Flop_7 |D_Flip_Flop_12  |     1|
+|72    |  Slow_Clk_0          |Slow_Clk        |    81|
++------+----------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 751.699 ; gain = 160.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 751.699 ; gain = 493.387
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+125 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 761.648 ; gain = 516.348
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.runs/synth_1/High_Level_Nano_Processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file High_Level_Nano_Processor_utilization_synth.rpt -pb High_Level_Nano_Processor_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 761.648 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 16 22:19:13 2018...

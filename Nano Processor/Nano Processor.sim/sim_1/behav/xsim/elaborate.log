@@ -1,6 +1,6 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_Nano_Processor_behav xil_defaultlib.TB_Nano_Processor -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9b7466df63c84a708dd872c801467c14 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TB_High_Level_Nano_Processor_behav xil_defaultlib.TB_High_Level_Nano_Processor -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,6 +11,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
 Compiling architecture behavioral of entity xil_defaultlib.D_Flip_Flop [d_flip_flop_default]
 Compiling architecture behavioral of entity xil_defaultlib.Program_Counter [program_counter_default]
 Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
@@ -30,5 +31,7 @@ Compiling architecture behavioral of entity xil_defaultlib.TSB_Set_8_to_8 [tsb_s
 Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add_Sub [add_sub_default]
 Compiling architecture behavioral of entity xil_defaultlib.Nano_Processor [nano_processor_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_nano_processor
-Built simulation snapshot TB_Nano_Processor_behav
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
+Compiling architecture behavioral of entity xil_defaultlib.High_Level_Nano_Processor [high_level_nano_processor_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.tb_high_level_nano_processor
+Built simulation snapshot TB_High_Level_Nano_Processor_behav

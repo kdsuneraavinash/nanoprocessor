@@ -2,3 +2,6 @@ Running: xsim.dir/TB_Nano_Processor_func_synth/xsimk.exe -simmode gui -wdb TB_Na
 Design successfully loaded
 Design Loading Memory Usage: 6352 KB (Peak: 6352 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7336 KB (Peak: 7336 KB)
+Simulation CPU Usage: 15 ms

@@ -23,7 +23,7 @@ begin
     process (Clk_in) begin
         if (rising_edge(Clk_in)) then           -- if signal is in rising edge
             count <= count +1;
-            if (count >= 2) then                -- show down by this much -- 25000000
+            if (count >= 0) then                -- show down by this much -- 25000000
                 clk_status <= not clk_status;   -- flip clk_status
                 Clk_out<= clk_status;           -- output reset count
                 count <= 1;                     -- reset count

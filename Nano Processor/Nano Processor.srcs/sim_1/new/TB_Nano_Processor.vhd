@@ -83,7 +83,7 @@ begin
             CURR_IA => CURR_IA
        );  
        
-       CLK <= not CLK after 5ns;
+       CLK <= not CLK after 15ns;
                   
 end Behavioral;   
                   

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 16 21:52:35 2018
+# Process ID: 2828
+# Current directory: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim/xsim.dir/TB_High_Level_Nano_Processor_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source E:/Projects/Vivaldo/nanoprocessor/Nano -notrace
+couldn't read file "E:/Projects/Vivaldo/nanoprocessor/Nano": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 16 21:52:35 2018...
