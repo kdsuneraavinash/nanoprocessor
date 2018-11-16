@@ -1,21 +1,9 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/14/2018 12:20:25 AM
--- Design Name: 
--- Module Name: Nano_Processor - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Team Members:    K. D. Sunera Avinash Chandrasiri 
+-- Create Date:     11/14/2018 12:20:25 AM
+-- Module Name:     Nano_Processor - Behavioral
+-- Project Name:    Nano Processor
+-- Description:     Nano Processor(Internal)
 ----------------------------------------------------------------------------------
 
 

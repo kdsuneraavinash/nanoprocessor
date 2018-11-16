@@ -76,8 +76,15 @@ begin
         
         Reg_En <= Inst(13 downto 11);
                     
-        LD <= OP_MOVI OR OP_CLR OR OP_JZR;
+        LD <= OP_MOVI OR OP_CLR;
         LSB <= Inst(7 downto 0);
-        JMP <= OP_JZR;
+        JMP <= OP_JZR AND (NOT Reg(0))
+                    AND (NOT Reg(1))
+                    AND (NOT Reg(2))
+                    AND (NOT Reg(3))
+                    AND (NOT Reg(4))
+                    AND (NOT Reg(5))
+                    AND (NOT Reg(6))
+                    AND (NOT Reg(7));
 
 end Behavioral; 
