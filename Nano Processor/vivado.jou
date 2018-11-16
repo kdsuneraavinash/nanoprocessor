@@ -1,0 +1,138 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Thu Nov 15 16:41:49 2018
+# Process ID: 7152
+# Current directory: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7068 C:\Users\170081L\Downloads\nanoprocessor-master\nanoprocessor\nanoprocessor-master\Nano Processor\Nano Processor.xpr
+# Log file: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor/vivado.log
+# Journal file: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor/Nano Processor.xpr}
+launch_simulation
+source TB_Nano_Processor.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Instruction_Decoder [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TB_Instruction_Decoder.tcl
+close_sim
+launch_simulation
+source TB_Instruction_Decoder.tcl
+close_sim
+launch_simulation
+source TB_Instruction_Decoder.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Nano_Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_sim simulation_1
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+add_bp {C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd} 85
+remove_bps -file {C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor/nanoprocessor-master/Nano Processor/Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd} -line 85
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl

@@ -1,50 +1,85 @@
 ----------------------------------------------------------------------------------
--- Create Date: 10/18/2018 01:56:55 PM
--- Design Name: Register
--- Module Name: Reg - Behavioral
--- Project Name: Nano Processor
--- Description: Register that can hold 8 bits
--- Dependencies: None
+-- Basic memory unit that can hold 8 bits
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
 entity Reg is
-    Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
-           EN : in STD_LOGIC := '0';
+    Port ( D : in STD_LOGIC_VECTOR(7 downto 0);
+           Reset : in STD_LOGIC;
+           En : in STD_LOGIC;
            Clk : in STD_LOGIC;
-           Reset: in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (7 downto 0));
+           Q : out STD_LOGIC_VECTOR(7 downto 0));
 end Reg;
 
 architecture Behavioral of Reg is
-    signal is_start: boolean := true;
-    
-begin
-    
-    process (Clk) begin
-        if is_start then
-            is_start <= false;
-            Q <= "00000000";
-        end if;
-    
-        if (falling_edge(Clk)) then -- respond when clock rises
-                if EN = '1' then
-                    -- If enable is set input the value to the register
-                    Q(0) <= D(0) and (not Reset);
-                    Q(1) <= D(1) and (not Reset);
-                    Q(2) <= D(2) and (not Reset);
-                    Q(3) <= D(3) and (not Reset);
-                    Q(4) <= D(4) and (not Reset);
-                    Q(5) <= D(5) and (not Reset);
-                    Q(6) <= D(6) and (not Reset);
-                    Q(7) <= D(7) and (not Reset);
-                end if;
-        end if;
-       
-    end process;
+    component D_Flip_Flop
+        Port ( D : in STD_LOGIC;
+               Res : in STD_LOGIC;
+               Clk : in STD_LOGIC;
+               Q : out STD_LOGIC);
+    end component;
 
+    signal Clk_With_Enabled : STD_LOGIC :='0';
+begin
+
+    Clk_With_Enabled <= Clk and En;
+
+    D_Flip_Flop_0: D_Flip_Flop
+        port map(
+            D => D(0),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(0));
+
+    D_Flip_Flop_1: D_Flip_Flop
+        port map(
+            D => D(1),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(1));
+                        
+    D_Flip_Flop_2: D_Flip_Flop
+        port map(
+            D => D(2),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(2));
+            
+    D_Flip_Flop_3: D_Flip_Flop
+        port map(
+            D => D(3),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(3));
+
+    D_Flip_Flop_4: D_Flip_Flop
+        port map(
+            D => D(4),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(4));
+
+    D_Flip_Flop_5: D_Flip_Flop
+        port map(
+            D => D(5),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(5));
+                        
+    D_Flip_Flop_6: D_Flip_Flop
+        port map(
+            D => D(6),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(6));
+            
+    D_Flip_Flop_7: D_Flip_Flop
+        port map(
+            D => D(7),
+            Res => Reset,
+            Clk => Clk_With_Enabled,
+            Q => Q(7));
 end Behavioral;

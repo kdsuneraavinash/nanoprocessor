@@ -41,7 +41,9 @@ architecture Behavioral of TB_Nano_Processor is
            R4 : out STD_LOGIC_VECTOR (7 downto 0);
            R5 : out STD_LOGIC_VECTOR (7 downto 0);
            R6 : out STD_LOGIC_VECTOR (7 downto 0);
-           R7 : out STD_LOGIC_VECTOR (7 downto 0)
+           R7 : out STD_LOGIC_VECTOR (7 downto 0);
+          NEXT_IA: out STD_LOGIC_VECTOR (3 downto 0);
+          CURR_IA: out STD_LOGIC_VECTOR (3 downto 0)
            );
     end component;
     
@@ -59,6 +61,8 @@ architecture Behavioral of TB_Nano_Processor is
     signal CARRY : STD_LOGIC := '0';
     signal OVERFLOW : STD_LOGIC := '0';
     signal SIGN : STD_LOGIC := '0';
+    signal NEXT_IA: STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    signal CURR_IA: STD_LOGIC_VECTOR (3 downto 0) := "0000";
 begin
     UUT: Nano_Processor port map(
             R7 => R7,
@@ -74,10 +78,12 @@ begin
             ZERO => ZERO,
             CARRY => CARRY,
             OVERFLOW => OVERFLOW,
-            SIGN => SIGN
+            SIGN => SIGN,
+            NEXT_IA => NEXT_IA,
+            CURR_IA => CURR_IA
        );  
        
-       CLK <= not CLK after 5ns;
+       CLK <= not CLK after 20ns;
                   
 end Behavioral;   
                   

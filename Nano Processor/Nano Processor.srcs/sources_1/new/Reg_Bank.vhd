@@ -1,12 +1,6 @@
 ----------------------------------------------------------------------------------
--- Create Date: 11/09/2018 09:33:12 PM
--- Design Name: Register Bank
--- Module Name: Reg_Bank - Behavioral
--- Project Name: Nano Processor
--- Description: Register Bamk which will handle input and output of all registers
--- Dependencies: Decoder_3_to_8, Reg
+-- Register bank to store values
 ----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -40,7 +34,7 @@ architecture Behavioral of Reg_Bank is
     -- Defining Register Component
     component Reg
     Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
-           EN : in STD_LOGIC;
+            En : in STD_LOGIC;
            Reset: in STD_LOGIC;
            Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (7 downto 0)
@@ -52,89 +46,79 @@ architecture Behavioral of Reg_Bank is
     signal Reg_Store_Val: STD_LOGIC_VECTOR (7 downto 0);
     
 begin
-
-    -- Real value which will be stored in the register
-    -- 0 if CLR is set
-    Reg_Store_Val(0) <= D(0);
-    Reg_Store_Val(1) <= D(1);
-    Reg_Store_Val(2) <= D(2);
-    Reg_Store_Val(3) <= D(3);
-    Reg_Store_Val(4) <= D(4);
-    Reg_Store_Val(5) <= D(5);
-    Reg_Store_Val(6) <= D(6);
-    Reg_Store_Val(7) <= D(7);
-
+    -- taking the correct register to choose
     Decoder_3_to_8_0: Decoder_3_to_8
         port map(
-            I  => I (2 downto 0),
+            I  => I,
             EN => '1',
-            Y => Reg_Sel(7 downto 0)
+            Y => Reg_Sel
         );
         
     -- Hardcoding R0 to reduce complexity when selecting registers
     R0 <= "00000000";
     
+    -- All other registers
     Reg_1: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(1),
             Reset => CLR,
             Clk => Clk,
-            Q => R1(7 downto 0)
+            Q => R1
         );
     
     Reg_2: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(2),
             Reset => CLR,
             Clk => Clk,
-            Q => R2(7 downto 0)
+            Q => R2
         );
     
     Reg_3: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(3),
             Reset => CLR,
             Clk => Clk,
-            Q => R3(7 downto 0)
+            Q => R3
         );
                 
     Reg_4: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(4),
             Reset => CLR,
             Clk => Clk,
-            Q => R4(7 downto 0)
+            Q => R4
         );
     
     Reg_5: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(5),
             Reset => CLR,
             Clk => Clk,
-            Q => R5(7 downto 0)
+            Q => R5
         );
     
     Reg_6: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(6),
             Reset => CLR,
             Clk => Clk,
-            Q => R6(7 downto 0)
+            Q => R6
         );
     
     Reg_7: Reg
         port map(
-            D  => Reg_Store_Val(7 downto 0),
+            D  => D,
             EN => Reg_Sel(7),
             Reset => CLR,
             Clk => Clk,
-            Q => R7(7 downto 0)
+            Q => R7
         );
         
 end Behavioral;

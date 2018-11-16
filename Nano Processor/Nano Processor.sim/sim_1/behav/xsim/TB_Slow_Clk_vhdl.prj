@@ -1,7 +1,38 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../Nano Processor.srcs/sources_1/new/Decoder_2_to_4.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Decoder_3_to_8.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Reg.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Reg_Bank.vhd" \
 "../../../../Nano Processor.srcs/sources_1/new/Slow_Clk.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/HA.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/FA.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Add_Sub.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Tri_State_Buffer_8.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/TSB_Set_8_to_8.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Add_4.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/TSB_Set_2_to_8.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Decoder_1_to_2.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Tri_State_Buffer_4.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/ROM_16_17.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Program_Counter.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/Nano_Processor.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Decoder_3_to_8.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Reg.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_Slow_Clk.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Register_Bank.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Add_Sub.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_TSB_Set_8_to_8.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Add_4.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_8.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_4.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_ROM_16_17.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_D_FF.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Nano_Processor.vhd" \
 
 # Do not sort compile order
 nosort

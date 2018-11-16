@@ -1,0 +1,24 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Decoder_3_to_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Decoder_3_to_8
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Reg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Reg
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Slow_Clk
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Register_Bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Register_Bank
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Add_Sub.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Add_Sub
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_8_to_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_TSB_Set_8_to_8
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Add_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Add_4
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_TSB_Set_2_to_8
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_TSB_Set_2_to_4
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_ROM_16_17.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_ROM_16_17
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Instruction_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Nano_Processor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Nano_Processor

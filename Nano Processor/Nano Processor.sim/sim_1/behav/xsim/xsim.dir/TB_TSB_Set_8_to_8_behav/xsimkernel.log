@@ -1,7 +1,4 @@
-Running: xsim.dir/TB_TSB_Set_8_to_8_behav/xsimk.exe -simmode gui -wdb TB_TSB_Set_8_to_8_behav.wdb -simrunnum 0 -socket 50115
+Running: xsim.dir/TB_TSB_Set_8_to_8_behav/xsimk.exe -simmode gui -wdb TB_TSB_Set_8_to_8_behav.wdb -simrunnum 0 -socket 50107
 Design successfully loaded
-Design Loading Memory Usage: 4860 KB (Peak: 4860 KB)
+Design Loading Memory Usage: 4864 KB (Peak: 4864 KB)
 Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 5412 KB (Peak: 5412 KB)
-Simulation CPU Usage: 0 ms

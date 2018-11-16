@@ -30,23 +30,23 @@ end TB_Reg;
 architecture Behavioral of TB_Reg is
 component Reg
     Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
-       EN : in STD_LOGIC;
        Reset: in STD_LOGIC;
        Clk : in STD_LOGIC;
+       En : in STD_LOGIC;
        Q : out STD_LOGIC_VECTOR (7 downto 0));
     end component;
     
     signal D : STD_LOGIC_VECTOR (7 downto 0):= "00000000";
-    signal EN : STD_LOGIC := '0';
     signal Clk : STD_LOGIC:= '0';
     signal Q : STD_LOGIC_VECTOR (7 downto 0);
     signal Reset: STD_LOGIC;
+    signal En: STD_LOGIC:= '0';
 
 begin
     UUT: Reg port map(
-        D=> D,
-        EN => EN,
+        D => D,
         Reset => Reset,
+        En => En,
         Clk => Clk,
         Q => Q
     );
@@ -55,11 +55,11 @@ begin
     
     process begin
             Reset <= '0';
-            EN <= '1';
+            En <= '1';
             D <= "10111101";
                     
             wait for 100ns;
-            EN <= '1';
+            En <= '1';
             D <= "10110001";
             wait;
                 

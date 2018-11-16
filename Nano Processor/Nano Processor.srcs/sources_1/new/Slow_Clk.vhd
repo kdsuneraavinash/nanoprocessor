@@ -1,10 +1,5 @@
 ----------------------------------------------------------------------------------
--- Create Date: 10/11/2018 02:19:27 PM
--- Design Name: Slowed Down Clock
--- Module Name: Slow_Clk - Behavioral
--- Project Name: Nano Processor
--- Description: Clock which is slowed down
--- Dependencies: None
+-- Slowed Down CLock
 ----------------------------------------------------------------------------------
 
 
@@ -14,7 +9,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Slow_Clk is
     Port ( Clk_in : in STD_LOGIC;
-           Clk_out : out STD_LOGIC);
+           Clk_out : out STD_LOGIC:='0');
 end Slow_Clk;
 
 architecture Behavioral of Slow_Clk is
@@ -30,7 +25,7 @@ begin
             count <= count +1;
             if (count >= 2) then                -- show down by this much -- 25000000
                 clk_status <= not clk_status;   -- flip clk_status
-                Clk_out<= clk_status;               -- output reset count
+                Clk_out<= clk_status;           -- output reset count
                 count <= 1;                     -- reset count
             end if;
         end if;

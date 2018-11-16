@@ -44,8 +44,7 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-extern void execute_103(char*, char *);
-extern void execute_11(char*, char *);
+extern void execute_104(char*, char *);
 extern void execute_12(char*, char *);
 extern void execute_13(char*, char *);
 extern void execute_14(char*, char *);
@@ -53,7 +52,7 @@ extern void execute_15(char*, char *);
 extern void execute_16(char*, char *);
 extern void execute_17(char*, char *);
 extern void execute_18(char*, char *);
-extern void execute_91(char*, char *);
+extern void execute_19(char*, char *);
 extern void execute_92(char*, char *);
 extern void execute_93(char*, char *);
 extern void execute_94(char*, char *);
@@ -65,12 +64,13 @@ extern void execute_99(char*, char *);
 extern void execute_100(char*, char *);
 extern void execute_101(char*, char *);
 extern void execute_102(char*, char *);
-extern void execute_26(char*, char *);
+extern void execute_103(char*, char *);
 extern void execute_27(char*, char *);
-extern void execute_21(char*, char *);
+extern void execute_28(char*, char *);
 extern void execute_22(char*, char *);
+extern void execute_23(char*, char *);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[26] = {(funcp)execute_103, (funcp)execute_11, (funcp)execute_12, (funcp)execute_13, (funcp)execute_14, (funcp)execute_15, (funcp)execute_16, (funcp)execute_17, (funcp)execute_18, (funcp)execute_91, (funcp)execute_92, (funcp)execute_93, (funcp)execute_94, (funcp)execute_95, (funcp)execute_96, (funcp)execute_97, (funcp)execute_98, (funcp)execute_99, (funcp)execute_100, (funcp)execute_101, (funcp)execute_102, (funcp)execute_26, (funcp)execute_27, (funcp)execute_21, (funcp)execute_22, (funcp)vhdl_transfunc_eventcallback};
+funcp funcTab[26] = {(funcp)execute_104, (funcp)execute_12, (funcp)execute_13, (funcp)execute_14, (funcp)execute_15, (funcp)execute_16, (funcp)execute_17, (funcp)execute_18, (funcp)execute_19, (funcp)execute_92, (funcp)execute_93, (funcp)execute_94, (funcp)execute_95, (funcp)execute_96, (funcp)execute_97, (funcp)execute_98, (funcp)execute_99, (funcp)execute_100, (funcp)execute_101, (funcp)execute_102, (funcp)execute_103, (funcp)execute_27, (funcp)execute_28, (funcp)execute_22, (funcp)execute_23, (funcp)vhdl_transfunc_eventcallback};
 const int NumRelocateId= 26;
 
 void relocate(char *dp)

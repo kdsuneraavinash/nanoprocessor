@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/12/2018 06:56:48 PM
--- Design Name: 
--- Module Name: TSB_Set_8_to_8 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Tri State Buffer set with 2 8 bit buffers to select one 8 bit buffer
 ----------------------------------------------------------------------------------
 
 
@@ -44,10 +28,9 @@ architecture Behavioral of TSB_Set_2_to_8 is
     end component;
 
     signal EN_TSB: std_logic_vector(1 downto 0);
-    signal V0: STD_LOGIC_VECTOR (7 downto 0);
-    signal V1: STD_LOGIC_VECTOR (7 downto 0);
     
 begin
+    -- select from 2 buffers
     Decoder_1_to_2_0: Decoder_1_to_2
         port map(
             I  => S,
@@ -55,20 +38,19 @@ begin
             Y  => EN_TSB(1 downto 0)
         );
         
+    -- tri state buffers
     Tri_State_Buffer_8_0: Tri_State_Buffer_8
         port map(
             I  => R0 (7 downto 0),
             EN => EN_TSB(0),
-            O  => V0
+            O  => Q
         );
                   
     Tri_State_Buffer_8_1: Tri_State_Buffer_8
       port map(
           I  => R1 (7 downto 0),
           EN => EN_TSB(1),
-          O  => V1
+          O  => Q
       );
-
-    Q <= V0 OR V1;
       
 end Behavioral;

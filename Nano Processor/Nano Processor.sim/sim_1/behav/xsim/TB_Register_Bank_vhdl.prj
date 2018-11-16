@@ -17,9 +17,9 @@ vhdl xil_defaultlib  \
 "../../../../Nano Processor.srcs/sources_1/new/TSB_Set_2_to_4.vhd" \
 "../../../../Nano Processor.srcs/sources_1/new/ROM_16_17.vhd" \
 "../../../../Nano Processor.srcs/sources_1/new/Program_Counter.vhd" \
-"../../../../Nano Processor.srcs/sources_1/new/D_FF.vhd" \
 "../../../../Nano Processor.srcs/sources_1/new/Instruction_Decoder.vhd" \
 "../../../../Nano Processor.srcs/sources_1/new/Nano_Processor.vhd" \
+"../../../../Nano Processor.srcs/sources_1/new/D_Flip_Flop.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_Decoder_3_to_8.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_Reg.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_Slow_Clk.vhd" \
@@ -32,6 +32,7 @@ vhdl xil_defaultlib  \
 "../../../../Nano Processor.srcs/sim_1/new/TB_ROM_16_17.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_D_FF.vhd" \
 "../../../../Nano Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd" \
+"../../../../Nano Processor.srcs/sim_1/new/TB_Nano_Processor.vhd" \
 
 # Do not sort compile order
 nosort

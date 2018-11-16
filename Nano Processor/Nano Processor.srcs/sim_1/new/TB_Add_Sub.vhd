@@ -29,8 +29,9 @@ architecture Behavioral of TB_Add_Sub is
                S : out STD_LOGIC_VECTOR(7 downto 0);
                CARRY_FLAG : out STD_LOGIC;
                ZERO_FLAG : out STD_LOGIC;
-              SIGN_FLAG: out STD_LOGIC;
-              OVERFLOW_FLAG : out STD_LOGIC);
+               SIGN_FLAG: out STD_LOGIC;
+               OVERFLOW_FLAG : out STD_LOGIC
+       );
      END COMPONENT;
      
      SIGNAL AS, CARRY_FLAG, ZERO_FLAG, SIGN_FLAG, OVERFLOW_FLAG : STD_LOGIC;
@@ -49,7 +50,7 @@ begin
         );
         
         process
-        begin
+        begin            
             A <= "01111100";
             B <= "00000001";
             AS <= '0';          -- Positive number + 1
@@ -70,7 +71,6 @@ begin
             AS <= '1';          -- Negative number - 1
             wait for 100ns;
             
-            
             A <= "01111100";
             B <= "00000111";
             AS <= '0';          -- Positive overflow
@@ -85,7 +85,6 @@ begin
             B <= "01111100";
             AS <= '1';          -- Zero
             wait for 100ns;
-            
             
             wait;
         end process;

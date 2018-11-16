@@ -1,0 +1,235 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Thu Nov 15 10:53:46 2018
+# Process ID: 5856
+# Current directory: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor-master/Nano Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6312 C:\Users\170081L\Downloads\nanoprocessor-master\nanoprocessor-master\Nano Processor\Nano Processor.xpr
+# Log file: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor-master/Nano Processor/vivado.log
+# Journal file: C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor-master/Nano Processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/170081L/Downloads/nanoprocessor-master/nanoprocessor-master/Nano Processor/Nano Processor.xpr}
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_D_FF [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TB_D_FF.tcl
+close_sim
+launch_simulation
+source TB_D_FF.tcl
+close_sim
+launch_simulation
+source TB_D_FF.tcl
+close_sim
+launch_simulation
+source TB_D_FF.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Nano_Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_sim simulation_12
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_D_FF [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_sim simulation_16
+close_sim
+launch_simulation
+source TB_D_FF.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Nano_Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_sim simulation_19
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Add_Sub [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TB_Add_Sub.tcl
+close_sim
+launch_simulation
+source TB_Add_Sub.tcl
+close_sim
+launch_simulation
+source TB_Add_Sub.tcl
+close_sim
+launch_simulation
+source TB_Add_Sub.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_Nano_Processor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_sim simulation_56
+close_sim
+launch_simulation
+source TB_Nano_Processor.tcl

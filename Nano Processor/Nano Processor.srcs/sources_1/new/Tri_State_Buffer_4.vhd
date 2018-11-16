@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/12/2018 06:52:51 PM
--- Design Name: 
--- Module Name: Tri_State_Buffer_8 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Tri State Buffer to hold 4bits
 ----------------------------------------------------------------------------------
 
 
@@ -31,5 +15,5 @@ end Tri_State_Buffer_4;
 architecture Behavioral of Tri_State_Buffer_4 is
 
 begin
-    O <= I when (EN = '1') else "0000";
+    O <= I when (EN = '1') else "ZZZZ";
 end Behavioral;

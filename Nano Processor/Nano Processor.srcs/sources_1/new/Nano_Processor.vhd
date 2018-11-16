@@ -36,14 +36,15 @@ entity Nano_Processor is
            R4 : out STD_LOGIC_VECTOR (7 downto 0);
            R5 : out STD_LOGIC_VECTOR (7 downto 0);
            R6 : out STD_LOGIC_VECTOR (7 downto 0);
-           R7 : out STD_LOGIC_VECTOR (7 downto 0)
+           R7 : out STD_LOGIC_VECTOR (7 downto 0);
+           NEXT_IA: out STD_LOGIC_VECTOR (3 downto 0);
+           CURR_IA: out STD_LOGIC_VECTOR (3 downto 0)
            );
 end Nano_Processor;
 
 architecture Behavioral of Nano_Processor is
     component Program_Counter
         Port ( CLR : in STD_LOGIC;
-               EN : in STD_LOGIC;
                CLK : in STD_LOGIC;
                D : in STD_LOGIC_VECTOR (3 downto 0);
                Q : out STD_LOGIC_VECTOR (3 downto 0));
@@ -56,7 +57,6 @@ architecture Behavioral of Nano_Processor is
     
     component Instruction_Decoder
         Port ( Inst : in STD_LOGIC_VECTOR (16 downto 0);
-               CLK : in STD_LOGIC;
                Reg : in STD_LOGIC_VECTOR (7 downto 0);
                LSB : out STD_LOGIC_VECTOR (7 downto 0);
                Reg_En : out STD_LOGIC_VECTOR (2 downto 0);
@@ -162,7 +162,6 @@ begin
     Program_Counter_0: Program_Counter
         port map(
             CLR => CLR,
-            EN => CLK,
             CLK => CLK,
             D => NEXT_INST_ADDR,
             Q => CURR_INST_ADDR
@@ -191,7 +190,6 @@ begin
     Instruction_Decoder_0: Instruction_Decoder
         port map(
             Inst => CURR_INST,
-            CLK  => CLK,
             Reg => MUX_A_REG_VAL,
             LSB  => DEC_LSB,
             Reg_En => DEC_REG_EN,
@@ -274,5 +272,7 @@ begin
     R2 <= REG_BANK_R2;
     R1 <= REG_BANK_R1;
     R0 <= REG_BANK_R0;
+    NEXT_IA <= NEXT_INST_ADDR;
+    CURR_IA <= CURR_INST_ADDR;
     
 end Behavioral;

@@ -20,34 +20,28 @@ opcodes = {
     NOP: "111"
 }
 
-# Define inputs here
-inputs = {
-    0: "MOVI R1 5",
-    1: "MOVI R2 5",
-    2: "MOVI R3 1",
-    3: "MOVI R4 0",
-    4: "ADD R4 R2",
-    5: "MOV R7 R4",
-    6: "SUB R2 R3",
-    7: "MOV R7 R2",
-    8: "JZR R2 11",
-    9: "NOP",
-    10: "JZR R0 4",
-    11: "NOP",
-    12: "MOV R4 R7",
-    13: "NOP",
-    14: "NOP",
-    15: "NOP",
-    }
+with open("input.txt", "r") as f:
+    all_inputs = f.read()
 
+all_inputs = map(lambda x: x.strip(), all_inputs.strip().split("\n"))
+
+
+inputs = zip(range(15), all_inputs)
+
+if len(inputs) > 16:
+    print "Too much instructions. Ignoring rest."
+    inputs = inputs[:16]
+elif len(inputs) < 16:
+    inputs += zip(range(len(inputs), 16), ["NOP"]*(16-len(inputs)))
+inputs = dict(inputs)
 
 compiled = []
 for i in xrange(len(inputs)):
     raw_data = inputs[i].upper().split()
     
-    assert len(raw_data) != 0, "No opcode found"
-    
     try:
+        assert len(raw_data) != 0, "No opcode found"
+        
         # Extract opcode
         encoded_opcode = raw_data[0]
         
@@ -108,13 +102,17 @@ for i in xrange(len(inputs)):
     except Exception as e:
         # Syntax error catcher
         print "Syntax Error in line {}\nLine:\t{}\nCause: {}".format(i, inputs[i], e.args[0])
-        print 
+        print
         break
 else:
-    print """
+    s = """
 signal instruction_ROM : rom_type := (
 \t\t{}
  );
     
     """.format(",\n\t\t".join(compiled))
-    
+    print s
+    with open("output.txt", "w") as f:
+        f.write(s)
+
+raw_input()

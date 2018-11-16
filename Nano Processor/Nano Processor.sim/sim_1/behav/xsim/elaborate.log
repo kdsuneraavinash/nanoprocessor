@@ -11,7 +11,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_Flip_Flop [d_flip_flop_default]
 Compiling architecture behavioral of entity xil_defaultlib.Program_Counter [program_counter_default]
 Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add_4 [add_4_default]
@@ -19,11 +19,11 @@ Compiling architecture behavioral of entity xil_defaultlib.Decoder_1_to_2 [decod
 Compiling architecture behavioral of entity xil_defaultlib.Tri_State_Buffer_4 [tri_state_buffer_4_default]
 Compiling architecture behavioral of entity xil_defaultlib.TSB_Set_2_to_4 [tsb_set_2_to_4_default]
 Compiling architecture behavioral of entity xil_defaultlib.ROM_16_17 [rom_16_17_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
 Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
 Compiling architecture behavioral of entity xil_defaultlib.Tri_State_Buffer_8 [tri_state_buffer_8_default]
 Compiling architecture behavioral of entity xil_defaultlib.TSB_Set_2_to_8 [tsb_set_2_to_8_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
-Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
 Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
 Compiling architecture behavioral of entity xil_defaultlib.Reg_Bank [reg_bank_default]
 Compiling architecture behavioral of entity xil_defaultlib.TSB_Set_8_to_8 [tsb_set_8_to_8_default]

@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 10/04/2018 02:09:39 PM
--- Design Name: 
--- Module Name: Decoder_3_to_8 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Decoder to decode 3 bits into 8 bits
 ----------------------------------------------------------------------------------
 
 
@@ -38,23 +22,23 @@ architecture Behavioral of Decoder_3_to_8 is
     );
     end component;
     
-    signal Y0, Y1: std_logic_vector(3 downto 0);
+    signal Y0, Y1: STD_LOGIC_VECTOR(3 downto 0);
     
 
 begin
 
- 
     Decoder_2_to_4_0: Decoder_2_to_4
         port map(
         I  => I (1 downto 0),
         EN => EN,
-        Y(3 downto 0)  => Y0 (3 downto 0)
+        Y => Y0
         );
+        
     Decoder_2_to_4_1: Decoder_2_to_4
         port map(
         I  => I (1 downto 0),
         EN => EN,
-        Y(3 downto 0)  => Y1 (3 downto 0)
+        Y => Y1
         );
     
     Y(0) <= Y0(0) AND (NOT I(2));

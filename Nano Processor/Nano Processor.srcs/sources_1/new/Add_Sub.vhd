@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 09/27/2018 04:54:09 PM
--- Design Name: 
--- Module Name: RCA_4 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Add Sub Unit to do arithmatic operations
 ----------------------------------------------------------------------------------
 
 
@@ -134,11 +118,14 @@ begin
     S(7) <= Output(7);
     
     CARRY_FLAG <= FA7_C;   
+    
     ZERO_FLAG <= (NOT Output(0)) AND (NOT Output(1)) AND (NOT Output(2)) AND (NOT Output(3)) AND
                     (NOT Output(4)) AND (NOT Output(5)) AND (NOT Output(6)) AND (NOT Output(7));
+                    
     SIGN_FLAG <= Output(7);
-    OVERFLOW_FLAG <= (NOT AS) AND                                   -- Must be addition
-                    ( (A(7) AND  B(7) AND (NOT Output(7))) OR       -- A and B are positive, A+B negative
-                    ((NOT A(7)) AND (NOT B(7)) AND Output(7)) );    -- A and B are negative, A+B positive
+                    
+    OVERFLOW_FLAG <= (NOT AS) AND                               -- Must be addition
+                     (A(7) XNOR  B(7)) AND                      -- A and B have same sign
+                     (A(7) XOR Output(7));                      -- A and Output have opposite sign
                     
 end Behavioral;

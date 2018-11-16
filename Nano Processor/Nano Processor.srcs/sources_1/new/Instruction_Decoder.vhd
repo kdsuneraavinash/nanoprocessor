@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/12/2018 11:26:52 PM
--- Design Name: 
--- Module Name: Instruction_Decoder - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Instruction Decoder to switch parts in the Cct
 ----------------------------------------------------------------------------------
 
 
@@ -24,7 +8,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Instruction_Decoder is
     Port ( Inst : in STD_LOGIC_VECTOR (16 downto 0);
-           CLK : in STD_LOGIC;
            Reg : in STD_LOGIC_VECTOR (7 downto 0);
            LSB : out STD_LOGIC_VECTOR (7 downto 0);
            Reg_En : out STD_LOGIC_VECTOR (2 downto 0);
@@ -36,143 +19,65 @@ entity Instruction_Decoder is
 end Instruction_Decoder;
 
 architecture Behavioral of Instruction_Decoder is    
-    constant OP_ADD: std_logic_vector(2 downto 0):= "000";
-    constant OP_NEG: std_logic_vector(2 downto 0):= "001";
-    constant OP_MOVI: std_logic_vector(2 downto 0):= "010";
-    constant OP_JZR: std_logic_vector(2 downto 0):= "011";
-    constant OP_SUB: std_logic_vector(2 downto 0):= "100";
-    constant OP_CLR: std_logic_vector(2 downto 0):= "101";
-    constant OP_MOV: std_logic_vector(2 downto 0):= "110";
-    constant OP_NOP: std_logic_vector(2 downto 0):= "111";
+    component Decoder_3_to_8
+    Port ( I : in STD_LOGIC_VECTOR (2 downto 0);
+           EN : in STD_LOGIC;
+           Y : out STD_LOGIC_VECTOR (7 downto 0));
+    end component;
     
-    signal jumped: boolean:= false;
-    signal jump_pos: STD_LOGIC_VECTOR (7 downto 0);
+    signal MUX_A_DISABLED: STD_LOGIC;
+
+    signal OP_ADD: STD_LOGIC;
+    signal OP_NEG: STD_LOGIC;
+    signal OP_MOVI: STD_LOGIC;
+    signal OP_JZR: STD_LOGIC;
+    signal OP_SUB: STD_LOGIC;
+    signal OP_CLR: STD_LOGIC;
+    signal OP_MOV: STD_LOGIC;
+    signal OP_NOP: STD_LOGIC;
+    
+    signal DECODER_RESULT: std_logic_vector(7 downto 0);
+    
 begin
 
-	process (CLK)
-    	-- variable l : line;
-  	begin
-    if rising_edge(CLK) then
-    
-        if jumped then
-            jumped <= false;
-            Mux_A <= "111";                         -- Reg7 (Last Acc)
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => Acc + 0
-            -- storing (Store result in register given)
-            Reg_En <= "111";                        -- Reg7
-            LD <= '0';                              -- From Acc
-            LSB <= jump_pos;                        -- Given Literal value
-            if (Reg = "00000000") then
-                JMP <= '1';     
-            else
-                JMP <= '0';     
-            end if;
-            
-        else
-    
-      case Inst(16 downto 14) is
-      -- addition
-        when OP_ADD =>
-            Mux_A <= Inst(13 downto 11);            -- RegA
-            Mux_B <= Inst(10 downto 8);             -- RegB
-            SUB <= '0';                             -- + => A + B
-            -- storing (Store result in register 8)
-            Reg_En <= "111";                        -- Reg7
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- No Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
-            
-        -- subtraction
-        when OP_SUB =>
-            Mux_A <= Inst(13 downto 11);            -- RegA
-            Mux_B <= Inst(10 downto 8);             -- RegB
-            SUB <= '1';                             -- - => A - B
-            -- storing (Store result in register 8)
-            Reg_En <= "111";                        -- Reg7
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- No Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
-          
-        -- make negative
-        when OP_NEG =>
-            Mux_A <= "000";                         -- Reg0 (0)
-            Mux_B <= Inst(13 downto 11);            -- RegA
-            SUB <= '1';                             -- - => 0 - A
-            -- storing (Store result in register itself)
-            Reg_En <= Inst(13 downto 11);           -- RegA
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- No Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
+    Decoder_3_to_8_0: Decoder_3_to_8
+        port map(
+            I  => Inst (16 downto 14),
+            EN => '1',
+            Y  => DECODER_RESULT
+        );
+                        
+        OP_ADD <= DECODER_RESULT(0);
+        OP_NEG <= DECODER_RESULT(1);
+        OP_MOVI <= DECODER_RESULT(2);
+        OP_JZR <= DECODER_RESULT(3);
+        OP_SUB <= DECODER_RESULT(4);
+        OP_CLR <= DECODER_RESULT(5);
+        OP_MOV <= DECODER_RESULT(6);
+        OP_NOP <= DECODER_RESULT(7);
         
-        -- move literal to register
-        when OP_MOVI => 
-            Mux_A <= "000";                         -- Reg0 (0)
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => 0 + 0
-            -- storing (Store result in register given)
-            Reg_En <= Inst(13 downto 11);           -- RegA
-            LD <= '1';                              -- From Literal
-            LSB <= Inst(7 downto 0);                -- Given Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
-                    
-        -- clear register
-        when OP_CLR => 
-            Mux_A <= "000";                         -- Reg0 (0)
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => 0 + 0
-            -- storing (Store result in register given)
-            Reg_En <= Inst(13 downto 11);           -- RegA
-            LD <= '1';                              -- From Literal
-            LSB <= "00000000";                      -- Literal 0
-            -- jump
-            JMP <= '0';                             -- No Jump
-                    
-        -- move register to register
-        when OP_MOV => 
-            Mux_A <= Inst(13 downto 11);            -- RegA
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => A + 0
-            -- storing (Store result in register given)
-            Reg_En <= Inst(10 downto 8);            -- RegB
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- No Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
-                                
-        -- move register to register
-        when OP_JZR => 
-            Mux_A <= Inst(13 downto 11);            -- RegA
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => A + 0
-            -- storing (Store result in register given)
-            Reg_En <= "000";                        -- Reg0
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- Given Literal value for jump
-            -- jump 
-            JMP <= '0';
-            jumped <= true;
-            jump_pos <= Inst(7 downto 0);
+        MUX_A_DISABLED <= OP_NEG OR OP_MOV;  -- A has to be disabled in these instructions
         
-        -- no operation
-        when others =>
-            Mux_A <= "111";                         -- Reg7 (Last Acc)
-            Mux_B <= "000";                         -- Reg0 (0)
-            SUB <= '0';                             -- + => Acc + 0
-            -- storing (Store result in register given)
-            Reg_En <= "111";                        -- Reg7
-            LD <= '0';                              -- From Acc
-            LSB <= "00000000";                      -- Given Literal value
-            -- jump
-            JMP <= '0';                             -- No Jump
-          
-      end case;
-    end if;
-              end if;
-  end process;
+        Mux_A(0) <= Inst(11)
+                    AND NOT MUX_A_DISABLED;
+        Mux_A(1) <= Inst(12)
+                    AND NOT MUX_A_DISABLED;
+        Mux_A(2) <= Inst(13)
+                    AND NOT MUX_A_DISABLED;
+        
+        Mux_B(0) <= Inst(8)                   -- B should get instructions in last bits in these instructions
+                    OR (Inst(11) AND OP_NEG);
+        Mux_B(1) <= Inst(9)
+                    OR (Inst(12) AND OP_NEG);
+        Mux_B(2) <= Inst(10)
+                    OR (Inst(13) AND OP_NEG);
+        
+        SUB <= OP_NEG OR OP_SUB;
+        
+        Reg_En <= Inst(13 downto 11);
+                    
+        LD <= OP_MOVI OR OP_CLR OR OP_JZR;
+        LSB <= Inst(7 downto 0);
+        JMP <= OP_JZR;
 
 end Behavioral; 

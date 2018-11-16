@@ -1,0 +1,17 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.sim/sim_1/synth/func/xsim/TB_Nano_Processor_func_synth.v,1542342281,verilog,,,,D_Flip_Flop;D_Flip_Flop_10;D_Flip_Flop_11;D_Flip_Flop_12;D_Flip_Flop_13;D_Flip_Flop_14;D_Flip_Flop_15;D_Flip_Flop_16;D_Flip_Flop_17;D_Flip_Flop_18;D_Flip_Flop_19;D_Flip_Flop_20;D_Flip_Flop_21;D_Flip_Flop_22;D_Flip_Flop_23;D_Flip_Flop_24;D_Flip_Flop_25;D_Flip_Flop_26;D_Flip_Flop_27;D_Flip_Flop_28;D_Flip_Flop_29;D_Flip_Flop_30;D_Flip_Flop_31;D_Flip_Flop_32;D_Flip_Flop_33;D_Flip_Flop_34;D_Flip_Flop_35;D_Flip_Flop_36;D_Flip_Flop_37;D_Flip_Flop_38;D_Flip_Flop_39;D_Flip_Flop_40;D_Flip_Flop_41;D_Flip_Flop_42;D_Flip_Flop_43;D_Flip_Flop_44;D_Flip_Flop_45;D_Flip_Flop_46;D_Flip_Flop_47;D_Flip_Flop_48;D_Flip_Flop_49;D_Flip_Flop_50;D_Flip_Flop_51;D_Flip_Flop_52;D_Flip_Flop_53;D_Flip_Flop_54;D_Flip_Flop_55;D_Flip_Flop_56;D_Flip_Flop_57;D_Flip_Flop_58;D_Flip_Flop_59;D_Flip_Flop_6;D_Flip_Flop_60;D_Flip_Flop_61;D_Flip_Flop_62;D_Flip_Flop_63;D_Flip_Flop_64;D_Flip_Flop_7;D_Flip_Flop_8;D_Flip_Flop_9;Nano_Processor;Program_Counter;Reg;Reg_0;Reg_1;Reg_2;Reg_3;Reg_4;Reg_5;Reg_Bank;glbl,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Add_4.vhd,1542297149,vhdl,,,,tb_add_4,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Add_Sub.vhd,1542300791,vhdl,,,,tb_add_sub,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Decoder_3_to_8.vhd,1542339576,vhdl,,,,tb_decoder_3_to_8,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd,1542300523,vhdl,,,,tb_instruction_decoder,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Nano_Processor.vhd,1542297149,vhdl,,,,tb_nano_processor,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_ROM_16_17.vhd,1542297149,vhdl,,,,tb_rom_16_17,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Reg.vhd,1542302589,vhdl,,,,tb_reg,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Register_Bank.vhd,1542297149,vhdl,,,,tb_register_bank,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_Slow_Clk.vhd,1542297149,vhdl,,,,tb_slow_clk,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_4.vhd,1542297149,vhdl,,,,tb_tsb_set_2_to_4,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_2_to_8.vhd,1542297149,vhdl,,,,tb_tsb_set_2_to_8,,,,,,,,
+E:/Projects/Vivaldo/nanoprocessor/Nano Processor/Nano Processor.srcs/sim_1/new/TB_TSB_Set_8_to_8.vhd,1542297149,vhdl,,,,tb_tsb_set_8_to_8,,,,,,,,

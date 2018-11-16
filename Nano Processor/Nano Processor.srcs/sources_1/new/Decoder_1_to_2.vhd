@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 10/18/2018 02:14:20 PM
--- Design Name: 
--- Module Name: Decoder_1_to_2 - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Decoder to decode from 2 signals
 ----------------------------------------------------------------------------------
 
 

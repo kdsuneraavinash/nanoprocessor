@@ -28,16 +28,15 @@ end TB_Instruction_Decoder;
 
 architecture Behavioral of TB_Instruction_Decoder is
     component Instruction_Decoder
-        Port ( Inst : in STD_LOGIC_VECTOR (16 downto 0);
-               CLK : in STD_LOGIC;
-               Reg : in STD_LOGIC_VECTOR (7 downto 0);
-               LSB : out STD_LOGIC_VECTOR (7 downto 0);
-               Reg_En : out STD_LOGIC_VECTOR (2 downto 0);
-               Mux_A : out STD_LOGIC_VECTOR (2 downto 0);
-               LD : out STD_LOGIC;
-               Mux_B : out STD_LOGIC_VECTOR (2 downto 0);
-               Sub : out STD_LOGIC;
-               JMP : out STD_LOGIC);
+    Port ( Inst : in STD_LOGIC_VECTOR (16 downto 0);
+           Reg : in STD_LOGIC_VECTOR (7 downto 0);
+           LSB : out STD_LOGIC_VECTOR (7 downto 0);
+           Reg_En : out STD_LOGIC_VECTOR (2 downto 0);
+           Mux_A : out STD_LOGIC_VECTOR (2 downto 0);
+           LD : out STD_LOGIC;
+           Mux_B : out STD_LOGIC_VECTOR (2 downto 0);
+           Sub : out STD_LOGIC;
+           JMP : out STD_LOGIC);
     end component;
     
     signal Inst : STD_LOGIC_VECTOR (16 downto 0);
@@ -53,7 +52,6 @@ architecture Behavioral of TB_Instruction_Decoder is
 begin
         UUT: Instruction_Decoder port map(
                 Inst => Inst,
-                CLK => CLK,
                 Reg => Reg,
                 LSB => LSB,
                 Reg_En => Reg_En,
